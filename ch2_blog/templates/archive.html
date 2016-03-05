@@ -1,0 +1,5 @@
+{% for blogpost in blogposts %}
+    <h2>{{ blogpost.title }}</h2>
+    <p>{{ blogpost.timestamp }}</p>
+    <p>{{ blogpost.body }}</p>
+{% endfor %}
