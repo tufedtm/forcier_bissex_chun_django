@@ -1,5 +1,11 @@
-{% for blogpost in blogposts %}
-    <h2>{{ blogpost.title }}</h2>
-    <p>{{ blogpost.timestamp }}</p>
-    <p>{{ blogpost.body }}</p>
-{% endfor %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for blogpost in blogposts %}
+        <h2>{{ blogpost.title }}</h2>
+        <p>{{ blogpost.timestamp|date:'l, F jS' }}</p>
+        <p>{{ blogpost.body }}</p>
+    {% endfor %}
+
+{% endblock %}
